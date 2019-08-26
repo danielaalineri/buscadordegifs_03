@@ -1,0 +1,16 @@
+<header>
+  <a routerLink="/" id="logo">
+    GIFs
+  </a>
+
+  <form id="search" accept-charset="UTF-8">
+      <input type="search" (keyup)="onSearchType($event.target.value)" id="search-bar" name="q" 
+      placeholder="Pesquise aqui..." autocomplete="off" aria-label="search" #searchTerm> 
+  </form>
+</header>
+
+<main class="conteudo">
+  <img *ngFor="let gifs of dados" 
+    [src]="gifs.images.fixed_width.url" alt="foto">
+  
+</main>
